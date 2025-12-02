@@ -5,6 +5,7 @@ const config = {
   ],
   coveragePathIgnorePatterns: [
     "./*/test.js",
+    "./*/index.js",
   ],
   collectCoverage: true,
   coverageProvider: "v8",
