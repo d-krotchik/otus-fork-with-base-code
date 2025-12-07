@@ -1,4 +1,5 @@
 import { paragraphsCheck } from "./app.js";
+import '@testing-library/jest-dom';
 
 describe("Тесты для д.з. по скрытой кнопке и добавляемым параграфам", () => {
   let el;
@@ -53,9 +54,12 @@ describe("Тесты для д.з. по скрытой кнопке и доба�
 
   test("9. При очистке поля ввода, кнопка должна скрываться", () => {
     input.value = "Some text";
-    input.value = "";
+    input.dispatchEvent(new window.Event('input'));
 
-    expect(button.hasAttribute("hidden")).toBe(true);
+    input.value = "";
+    input.dispatchEvent(new window.Event('input'));
+
+    expect(button).toHaveAttribute('hidden');
   });
 
   test("10. Существует ли div, для вставки новых параграфов", () => {
