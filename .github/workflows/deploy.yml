@@ -5,8 +5,9 @@ on:
 
 jobs:
   test:
-    - run: npm run lint
-    - run: npm run test
+    steps:
+      - run: npm run lint
+      - run: npm run test
   deploy:
     permissions:
       contents: write
