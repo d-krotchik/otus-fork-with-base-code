@@ -1,8 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    background: lightblue;
+}
+
 .title {
     margin-bottom: 20px;
     font-size: 30px;
 }
 
-.paragraph {
-    max-width: 900px;
+.container {
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+}
+.card {
+    flex: 0 0 calc(50% - 10px);
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
 }

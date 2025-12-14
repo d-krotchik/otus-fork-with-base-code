@@ -1,4 +1,4 @@
-import { paragraphsCheck } from "./app.js";
+import { weatherApp } from "./app.js";
 import './index.css';
 
-paragraphsCheck(document.body);
+weatherApp(document.body);
