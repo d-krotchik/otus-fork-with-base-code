@@ -21,7 +21,7 @@ body {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    max-width: 600px;
+    max-width: 710px;
     margin: 0 auto;
 }
 
